@@ -11,21 +11,21 @@ public class ConsoleSink : ISink
 {
     public void Process(SinkContext context)
     {
-        throw new NotImplementedException();
+        System.Console.WriteLine(context.Message);
     }
 }
 
 public class SinkOption
 {
-  public string FilePath{get;set;}
-  public string DbConnectionString{get;set;}
+    public string FilePath { get; set; }
+    public string DbConnectionString { get; set; }
 }
 
 public class ConfigureSinkOption : IConfigureOptions<SinkOption>
 {
     public void Configure(SinkOption options)
     {
-      //configure default values
+        //configure default values
     }
 }
 

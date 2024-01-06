@@ -2,8 +2,6 @@ namespace Devon.Logger;
 
 public interface IDevonLogger<TType>
 {
-    TType Source { get; }
-
     void Log(string message, MessageLevelType levelType);
 
     void LogFatal(string message);
@@ -15,8 +13,6 @@ public interface IDevonLogger<TType>
 
 public class DevonLogger<TType> : IDevonLogger<TType>
 {
-    public TType Source { get; }
-
     private readonly ISinkProvider _sinkProvider;
 
     public DevonLogger(ISinkProvider sinkProvider)
@@ -28,10 +24,12 @@ public class DevonLogger<TType> : IDevonLogger<TType>
     {
         ISink sink = _sinkProvider.GetSink(levelType);
 
+        var formatedMessage = $"{DateTime.Now}-{typeof(TType).Namespace}:{message}";
+
         sink.Process(new SinkContext
         {
-            Message = message,
-            NameSpaceName = Source!.GetType().Namespace,
+            Message = formatedMessage,
+            NameSpaceName = typeof(TType).Namespace,
         });
     }
 
