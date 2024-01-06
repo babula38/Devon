@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devon.Logger", "Devon.Logger\Devon.Logger.csproj", "{B816B71F-4355-46E1-95CD-743AB2C8DB6C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{014B9DB0-264F-4D7A-97C4-0C2E42F17FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{014B9DB0-264F-4D7A-97C4-0C2E42F17FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{014B9DB0-264F-4D7A-97C4-0C2E42F17FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{014B9DB0-264F-4D7A-97C4-0C2E42F17FFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B816B71F-4355-46E1-95CD-743AB2C8DB6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B816B71F-4355-46E1-95CD-743AB2C8DB6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B816B71F-4355-46E1-95CD-743AB2C8DB6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B816B71F-4355-46E1-95CD-743AB2C8DB6C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
