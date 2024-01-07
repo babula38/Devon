@@ -15,11 +15,11 @@ public class SinkProvider : ISinkProvider
     public ISink GetSink(MessageLevelType levelType)
       => levelType switch
       {
-          MessageLevelType.Fatal => default,
-          MessageLevelType.Warn => default,
-          MessageLevelType.Error => default,
-          MessageLevelType.Info => new ConsoleSink(),
-          MessageLevelType.Debug => default,
+          MessageLevelType.Fatal
+            or MessageLevelType.Error
+            or MessageLevelType.Warn => new FileSink(),
+          MessageLevelType.Debug
+            or MessageLevelType.Info => new ConsoleSink(),
       };
 }
 

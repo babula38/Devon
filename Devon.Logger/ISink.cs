@@ -11,7 +11,15 @@ public class ConsoleSink : ISink
 {
     public void Process(SinkContext context)
     {
-        System.Console.WriteLine(context.Message);
+        Console.WriteLine($"Console:{context.Message}");
+    }
+}
+
+public class FileSink : ISink
+{
+    public void Process(SinkContext context)
+    {
+        Console.WriteLine($"File:{context.Message}");
     }
 }
 

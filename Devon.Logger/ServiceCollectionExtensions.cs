@@ -14,6 +14,8 @@ public static class ServiceCollectionExtensions
 
         serviceCollection.AddSingleton<ISinkProvider, SinkProvider>();
         serviceCollection.AddSingleton<ISink, ConsoleSink>();
+        serviceCollection.AddSingleton<ISink, FileSink>();
+
         serviceCollection.AddTransient(typeof(IDevonLogger<>), typeof(DevonLogger<>));
 
         return serviceCollection;

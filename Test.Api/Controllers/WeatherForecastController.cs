@@ -23,6 +23,7 @@ public class WeatherForecastController : ControllerBase
     public IEnumerable<WeatherForecast> Get()
     {
         _logger.Log("From Devon", MessageLevelType.Info);
+        _logger.Log("From Devon", MessageLevelType.Fatal);
 
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
         {
