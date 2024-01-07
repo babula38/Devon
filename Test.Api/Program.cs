@@ -9,7 +9,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDevonLogger(options =>
 {
-    options.FilePath = "";
+    options.FilePath = "C:\\mypath";
     options.DbConnectionString = "";
 });
 
